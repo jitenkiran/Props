@@ -1,0 +1,25 @@
+import Greeting from "./components/Greeting";
+import ProductCard from "./components/ProductCard";
+
+export default function Page() {
+  return (
+    <main style={{ padding: "20px" }}>
+      <Greeting name="Alex" />
+      
+      <h2>Featured Products</h2>
+      
+      {/* Reusing ProductCard with different props */}
+      <ProductCard 
+        title="Wireless Headphones" 
+        price={99} 
+        inStock={true} 
+      />
+      
+      <ProductCard 
+        title="Mechanical Keyboard" 
+        price={149} 
+        inStock={false} 
+      />
+    </main>
+  );
+}
